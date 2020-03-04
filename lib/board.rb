@@ -39,7 +39,6 @@ class Board
   def winner?
     winning_positions.each do |winning_position|
       next if winning_position_values(winning_position).all_empty?
-      # return true if winning_position_values(winning_position).all_same?
       return true if winning_position_values(winning_position).four_in_a_row?
     end
     false
